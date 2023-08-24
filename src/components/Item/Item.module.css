@@ -1,0 +1,66 @@
+.item {
+  margin: 24px 24px 0 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.item::after {
+    content: ""; /* Добавляем контент в псевдоэлемент, чтобы он был видимым */
+    position: absolute; /* Абсолютное позиционирование относительно .item */
+    top: 50%; /* Размещаем полоску по вертикали по центру */
+    right: -16px; /* Расстояние, на которое вы хотите сдвинуть полоску (изначально сдвинута за пределы элемента) */
+    width: 4px; /* Ширина полоски */
+    height: 0; /* Начальная высота полоски (0, чтобы она была скрыта) */
+    background-color: #f86600; /* Цвет полоски */
+    transition: height 0.2s ease, top 0.2s ease; /* Плавное изменение высоты и позиции по вертикали */
+  }
+  
+  .item:hover::after {
+    top: 0; /* При наведении перемещаем полоску в центр по вертикали */
+    height: 100%; /* Плавно увеличиваем высоту до 100% (появление полоски) */
+  }
+.range {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.info {
+  margin: 8px 0 8px 0;
+  display: flex;
+  gap: 8px;
+}
+.card {
+  width: 180px;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 16px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 4px 11px;
+  color: #f86600;
+  background: rgba(248, 102, 0, 0.15);
+  line-height: 20px;
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+.footer button:hover {
+  color: #fff;
+  background: #f86600;
+}
+.yearStyle {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 150% */
+  text-decoration-line: underline;
+}

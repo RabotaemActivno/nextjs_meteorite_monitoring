@@ -1,0 +1,19 @@
+.wrapper {
+    width: 402px;
+}
+.header h3 {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 36px;
+    width: 100%;
+    margin-bottom: 8px;
+}
+.selector {
+    text-decoration: underline;
+    display: flex;
+    font-size: 16px;
+}
+.active {
+    text-decoration: none;
+    font-weight: 700;
+}
